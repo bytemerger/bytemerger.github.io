@@ -7,7 +7,7 @@ tags: ["Java", "banking", "design", "spring"]
 
 ## Introduction
 
-After a long time away from Java, I needed to write this small application. An interesting feature of this application quote-unquote is that it would be built without a mainstream DB, not even H2 database. 
+After a long time away from Java, I needed to write this small application. An interesting feature of this application quote-unquote is that it would be built without a mainstream DB, not even H2 database.
 This restriction from using already existing DBs largely influenced my design decisions for the application. Here is the finished [code](https://github.com/bytemerger/digiFinance)
 
 ## Thoughts and Design...
@@ -16,18 +16,18 @@ I had about six endpoints to implement, which are listed below.
 
 ### Endpoints
 
-* `GET \account_info\:accountNumber`
-* `GET \account_statement\:accountNumber`
-* `POST \deposit`
-* `POST \withdrawal`
-* `POST \create_account`
-* `POST \login`
+- `GET \account_info\:accountNumber`
+- `GET \account_statement\:accountNumber`
+- `POST \deposit`
+- `POST \withdrawal`
+- `POST \create_account`
+- `POST \login`
 
-With the endpoints, I just decided to have at first two controllers `AccountController`,`TransactionController`, and two services that would serve the two controllers above. 
+With the endpoints, I just decided to have at first two controllers `AccountController`,`TransactionController`, and two services that would serve the two controllers above.
 
 Generally, it makes sense to start applications designs from the models and data relationships. However, in my case, I had a challenge. I did not know how to persist data or even make my system have some kind of a past life (memory) which is where the design becomes more interesting.
 
-First, I thought 🧐 maybe I could store my data somehow in memory 😄😄😄 but every request is different. From my experience with scripting languages, the application context exits only between request and response. A more reasonable solution is to keep the data in a singleton class that is managed by the spring container with `@ApplicationScope`.  I guess every request would have the same object 🤔 - java is compiled. 
+First, I thought 🧐 maybe I could store my data somehow in memory 😄😄😄 but every request is different. From my experience with scripting languages, the application context exits only between request and response. A more reasonable solution is to keep the data in a singleton class that is managed by the spring container with `@ApplicationScope`. I guess every request would have the same object 🤔 - java is compiled.
 
 Would like feedback on this if you have tried it…🙃
 
@@ -44,37 +44,41 @@ Every other decision at this point is generic with most spring boot applications
 
 The next step is to define how the data would look in the JSON file. I decided to use a Map of Maps to allow for O(1) read instead of looping through arrays to find accounts or transactions.
 
-so the `Map<String, Map<String, Object>>` map of maps which would look like 
+so the `Map<String, Map<String, Object>>` map of maps which would look like
 
 ```json
 {
-  "accounts" : {
-    "6513138112" : {
-      "accountName" : "New User",
-      "accountNumber" : "6513138112",
-      "balance" : 800.0,
-      "password" : "$2a$10$Jqh6rXBNfVKccGD7oA1Rl.PqiUdhcYND3Z7L6D5L5TTqLj9B5SEvy"
-    }
-  },
-  "transactions" : {
-    "6513138112" : {
-      "list" : [ {
-        "transactionDate" : "2022-02-26T22:08:08.063376",
-        "transactionType" : "Deposit",
-        "narration" : "",
-        "amount" : 900.0,
-        "balanceAfterTran" : 1700.0
-      }, {
-        "transactionDate" : "2022-02-26T22:16:39.848951",
-        "transactionType" : "Deposit",
-        "narration" : "",
-        "amount" : 100.0,
-        "balanceAfterTran" : 1800.0
-      } ]
-    }
-  }
+	"accounts": {
+		"6513138112": {
+			"accountName": "New User",
+			"accountNumber": "6513138112",
+			"balance": 800.0,
+			"password": "$2a$10$Jqh6rXBNfVKccGD7oA1Rl.PqiUdhcYND3Z7L6D5L5TTqLj9B5SEvy"
+		}
+	},
+	"transactions": {
+		"6513138112": {
+			"list": [
+				{
+					"transactionDate": "2022-02-26T22:08:08.063376",
+					"transactionType": "Deposit",
+					"narration": "",
+					"amount": 900.0,
+					"balanceAfterTran": 1700.0
+				},
+				{
+					"transactionDate": "2022-02-26T22:16:39.848951",
+					"transactionType": "Deposit",
+					"narration": "",
+					"amount": 100.0,
+					"balanceAfterTran": 1800.0
+				}
+			]
+		}
+	}
 }
 ```
+
 I used Jackson for mapping from JSON to `Map<String, Map<String, Object>>` where `Object` would either be `Account` or `TranactionList`.
 
 `TransactionList` is just a data class for lists of `Transaction` Objects see implementation below
@@ -104,5 +108,6 @@ public class TransactionList {
     }
 }
 ```
+
 You can check out the rest of the implementations in the [code](https://github.com/bytemerger/digiFinance) on GitHub. You can also contribute or improve the code. I would appreciate your feedback…
 In the next part, I would write about securing and completing the application stay tuned.
