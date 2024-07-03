@@ -3,7 +3,13 @@ title: "A post of Markdown elements"
 description: "This post is for testing and listing a number of different markdown elements"
 publishDate: "22 Feb 2023"
 updatedDate: 22 Jan 2024
-tags: ["test", "markdown"]
+tags: []
+draft: true
+ogImage: "/social-card.png"
+# adding cover image
+coverImage:
+  src: "./cover.png"
+  alt: "Astro build wallpaper"
 ---
 
 ## This is a H2 Heading
@@ -163,3 +169,17 @@ Image in the aliased assets folder: `src/assets/about-astro.png`
 ## Links
 
 [Content from markdown-it](https://markdown-it.github.io/)
+
+
+## Adding your own social image to a post
+
+This post is an example of how to add a custom [open graph](https://ogp.me/) social image, also known as an OG image, to a blog post.
+By adding the optional ogImage property to the frontmatter of a post, you opt out of [satori](https://github.com/vercel/satori) automatically generating an image for this page.
+
+If you open this markdown file `src/content/post/social-image.md` you'll see the ogImage property set to an image which lives in the public folder[^1].
+
+```yaml
+ogImage: "/social-card.png"
+```
+
+You can view the one set for this template page [here](https://astro-cactus.chriswilliams.dev/social-card.png).
