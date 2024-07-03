@@ -1,0 +1,71 @@
+---
+// import aboutImg from "@/assets/about-astro.png";
+import PageLayout from "@/layouts/Base.astro";
+// import { Image } from "astro:assets";
+
+const meta = {
+	description: "Home for my personal experiments",
+	title: "Projects",
+};
+const cactusTech: { desc: string; href: string; title: string }[] = [
+	{
+		desc: "Track finances of linked bank accounts on the mono platfrom",
+		href: "https://github.com/bytrebase/mono-tracker",
+		title: "Mono-tracker",
+	},
+	{
+		desc: "Parse Las files for useful information, it also returns data in csv.",
+		href: "https://github.com/bytrebase/las-java",
+		title: "LasJava",
+	},
+	{
+		desc: "Web app to manage and book retreats.",
+		href: "https://men.retreatschedule.com/",
+		title: "Mens Retreat",
+	},
+	{
+		desc: "A tool to create and edit personalized maps; exports to png.",
+		href: "https://mapmint.netlify.app/",
+		title: "Mint Map",
+	},
+	{
+		desc: "Help Spotify users curate and export songs to a playlist",
+		href: "https://github.com/bytemerger/spoteefy",
+		title: "Spoteefy",
+	}
+];
+---
+
+<PageLayout meta={meta}>
+	<div class="space-y-6">
+		<h1 class="title">Projects</h1>
+		
+		<!-- <div class="flex justify-center">
+			<Image
+				alt="A cartoon cactus looking at the 'Astro.build' logo"
+				fetchpriority="high"
+				loading="eager"
+				src={aboutImg}
+			/>
+		</div> -->
+		<section>
+			<dl class="space-y-4">
+				{
+					cactusTech.map(({ desc, href, title }) => (
+						<div class="flex flex-col gap-2 sm:flex-row">
+							<dt>
+								<span class="flex">
+									<a class="cactus-link" href={href} rel="noopener noreferrer" target="_blank">
+										{title}
+									</a>
+									:
+								</span>
+							</dt>
+							<dd>{desc}</dd>
+						</div>
+					))
+				}
+			</dl>
+		</section>
+	</div>
+</PageLayout>
