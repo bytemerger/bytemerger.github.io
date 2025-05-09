@@ -1,12 +1,11 @@
 ---
 title: "Bit Manipulation and Protocol Parsing: DNS Server"
-# dddd Bit Shifting and Bit Masking in a DNS Server:A Hands-On Refresher Through DNS Server Header Decoding
-publishDate: "25 Apr 2025"
-description: "A refresher on bit masking and shifiting with DNS Server Header Message"
+publishDate: "9 May 2025"
+description: "A refresher on bit masking and shifiting with DNS Server Message Header"
 tags: ["DNS", "Bits", "Golang", "Protocol"]
 ---
 
-## Bit Shifting and Bit Masking - A Refresher on Bit Manipulation with DNS Header Message
+## Bit Shifting and Bit Masking - A Refresher on Bit Manipulation with DNS Message Header
 
 I recently took on the Codecrafters DNS Server Challenge where I built a DNS server from scratch. I’ve always been fascinated by how foundational technologies work under the hood, and this was the perfect opportunity to dive deep. Building this, I picked up some programming skills specifically bit shifting, bit masking, and understanding endianness.
 
