@@ -407,4 +407,4 @@ Working with binary protocols like DNS gives you a hands-on refresher in some of
 
 You can also check out this interesting post by ![Andrew Healey](https://healeycodes.com/visualizing-chess-bitboards) on visualizing chess with bitboard and see how this bit manipulation can be very efficient
 
-you can also check out @healey post on how one can effciently map out chess boards with bit manipulation
+you can also check out @healey post on how one can efficently map out chess boards with bit manipulation
