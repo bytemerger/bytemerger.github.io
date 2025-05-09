@@ -304,7 +304,7 @@ This performs the same masking and shifting implicitly the `byte()` casts the bi
 
 ### Encoding the Flags Byte
 
-The third and fourth bytes (`headerBytes[2]` and `headerBytes[3]`) store a packed combination of multiple flags and values. Here's how we encode them
+The third and fourth bytes (`headerBytes[2]` and `headerBytes[3]`) store a packed combination of multiple flags and values. Here's how we encode them.
 
 ### Boolean to Integer Helper
 
@@ -404,4 +404,4 @@ This abstracts away the need to shift and mask manually, as `binary.BigEndian.Pu
 
 Working with binary protocols like DNS gives you a hands-on refresher in some of the most fundamental techniques in computer science: bit masking, bit shifting, and understanding how data is laid out in memory. It's a beautiful intersection of theory and practicality where getting the details right really matters.
 
-Check out this interesting post by [Andrew Healey](https://healeycodes.com/visualizing-chess-bitboards) on visualizing chess with bitboard and see how bit manipulation can be very efficient
+Check out this interesting post by [Andrew Healey](https://healeycodes.com/visualizing-chess-bitboards) on visualizing chess with bitboard and see how bit manipulation can be very efficient.
