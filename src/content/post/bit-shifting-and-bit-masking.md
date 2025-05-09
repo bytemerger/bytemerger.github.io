@@ -1,5 +1,5 @@
 ---
-title: "Bit Manipulation and Protocol Parsing: DNS Server"
+title: "Bit Manipulation and Protocol Parsing:DNS Server"
 publishDate: "9 May 2025"
 description: "A refresher on bit masking and shifiting with DNS Server Message Header"
 tags: ["DNS", "Bits", "Golang", "Protocol"]
@@ -402,6 +402,6 @@ This abstracts away the need to shift and mask manually, as `binary.BigEndian.Pu
 
 ### Conclusion
 
-Working with binary protocols like DNS gives you a hands-on refresher in some of the most fundamental techniques in computer science: bit masking, bit shifting, and understanding how data is laid out in memory. It's a beautiful intersection of theory and practicality where getting the details right really matters.
+Working with binary protocols like DNS gives you a hands-on refresher in some of the most fundamental techniques in computer science: bit masking, bit shifting, and understanding how data is laid out in memory. It's a beautiful intersection of theory and practicality where getting the details right really matters. see full code implementation [here](https://github.com/bytemerger/dns-server-go)
 
 Check out this interesting post by [Andrew Healey](https://healeycodes.com/visualizing-chess-bitboards) on visualizing chess with bitboard and see how bit manipulation can be very efficient.
