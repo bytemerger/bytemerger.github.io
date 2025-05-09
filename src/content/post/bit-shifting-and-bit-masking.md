@@ -6,9 +6,9 @@ description: "A refresher on bit masking and shifiting with DNS Server Header Me
 tags: ["DNS", "Bits", "Golang"]
 ---
 
-# Bit Shifting and Bit Masking in a DNS Server: A Refresher on Bit Manipulation with DNS Header Message
+## Bit Shifting and Bit Masking - A Refresher on Bit Manipulation with DNS Header Message
 
-I recently took on the Codecrafters DNS Server Challenge where I built a DNS server from scratch. I’ve always been fascinated by how foundational technologies work under the hood, and this was the perfect opportunity to dive deep. Building this, I picked up some crucial low-level programming skills specifically bit shifting, bit masking, and understanding endianness.
+I recently took on the Codecrafters DNS Server Challenge where I built a DNS server from scratch. I’ve always been fascinated by how foundational technologies work under the hood, and this was the perfect opportunity to dive deep. Building this, I picked up some programming skills specifically bit shifting, bit masking, and understanding endianness.
 
 In this article, I will walk you through what I learned. These techniques are crucial when decoding and encoding DNS message headers, which are streams of bytes that require manipulation to correctly represent the DNS protocol.
 
@@ -405,6 +405,6 @@ This abstracts away the need to shift and mask manually, as `binary.BigEndian.Pu
 
 Working with binary protocols like DNS gives you a hands-on refresher in some of the most fundamental techniques in computer science: bit masking, bit shifting, and understanding how data is laid out in memory. It's a beautiful intersection of theory and practicality where getting the details right really matters.
 
-You can also check out this interesting post by [Andrew Healey](https://healeycodes.com/visualizing-chess-bitboards) on visualizing chess with bitboard and see how this bit manipulation can be very efficient
+You can also check out this interesting post by [Andrew Healey](https://healeycodes.com/visualizing-chess-bitboards) on visualizing chess with bitboard and see how bit manipulation can be very efficient
 
 you can also check out @healey post on how one can efficently map out chess boards with bit manipulation
