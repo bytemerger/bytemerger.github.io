@@ -1,68 +1,49 @@
 ---
-import SocialList from "@/components/SocialList.astro";
-/* import PostPreview from "@/components/blog/PostPreview.astro";
-import { getAllPosts, sortMDByDate } from "@/data/post"; */
 import PageLayout from "@/layouts/Base.astro";
-
-/* const MAX_POSTS = 10;
-const allPosts = await getAllPosts();
-const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS); */
 ---
 
 <PageLayout meta={{ title: "Home" }}>
-	<section>
-		<h1 class="title mb-6">Hello! I am Francis</h1>
+	<section class="mb-12">
+		<h1 class="title mb-8 text-3xl">hey, I'm Francis</h1>
 		<p class="mb-4">
-			I am a software engineer at Spherity where I co-developed CARO; a credentialing service for compliance in
-			the American pharma market(DSCSA) utilizing technologies from Self-soverign identity and web3.
+		  Software engineer solving problems with a product-oriented mindset.
+      Currently I lead engineering decisions at Dev-Afrique Advisors as an Engineering Consultant.
 		</p>
 		<p class="mb-4">
-			In the past I worked at
-			<span class="cactus-link">
-				<a href="https://engage.so" rel="noopener noreferrer" target="_blank">
-					Engage messaging
-				</a>,
-			</span>
-			<span class="">
-				<a class="cactus-link" href="https://mobnia.com" rel="noopener noreferrer" target="_blank">
-					Mobnia
-				</a>,
-			</span>
-			<span class="">
-				<a
-					class="cactus-link"
-					href="https://mattedsgn.com"
-					rel="noopener noreferrer"
-					target="_blank"
-				>
-					Matte
-				</a>
-			</span>
-			and others
+			I developed an interest in computers relatively early playing around with an old zinox computer, and the phrase "You can just do things.", perfectly captures my passion and mindset towards computers.
 		</p>
-
 		<p class="mb-4">
-			Outside building products and hacking on computers, I enjoy playing football, taking sunset
-			pictures and driving
-
-			<p>
-				PS: I have done a 13 hour journey behind the steering and the best part is I did it with a
-				stick shift
-			</p>
+      Professionally, I started with PHP, Mysql and jQuery, well I dont have a Lambo 😀. Since then, I've worked with various 
+      technologies - mostly React, Node.js, TypeScript these days. I pick whatever tool fits the problem.
 		</p>
-		<br />
-		<SocialList />
+		<p class="mb-4">
+      I enjoy understanding how things work and I'm excited about developer tools, research, experimentation.
+			To deepen my knowledge of systems and network programming, I have dedicated time this year to building several foundational technologies from scratch. Among these projects are a BitTorrent downloader, an HTTP server, and a DNS server implemented in Go.
+		</p>
+		<p class="mb-4">
+      I have an Electronic Engineering Background with foundations in micro-processor design, and applied research. and Yes I have played around with <span class="cactus-link"><a href="https://github.com/bytemerger/multi-meter" rel="noopener noreferrer" target="_blank">microcontrollers</a></span>.
+		</p>
+		<p class="mb-4">
+			Outside of work: football, driving, taking pictures of sunsets and flowers, and occasionally lifting up heavy things in the gym, only to put them down again.
+		</p>
+		<p class="mb-4">
+			Contact me via DMs on <span class="cactus-link"><a href="https://www.linkedin.com/in/francis-onyishi-5a55791a0" rel="noopener noreferrer" target="_blank">LinkedIn</a></span> or <span class="cactus-link"><a href="mailto:onyishif@gmail.com">email</a></span>.
+		</p>
 	</section>
-	<!-- <section aria-label="Blog post list" class="mt-16">
-		<h2 class="title mb-4 text-xl">Posts</h2>
-		<ul class="space-y-4">
-			{
-				allPostsByDate.map((p) => (
-					<li class="grid gap-2 sm:grid-cols-[auto_1fr] sm:[&_q]:col-start-2">
-						<PostPreview post={p} />
-					</li>
-				))
-			}
+
+	<hr class="my-12 border-t border-dashed border-accent opacity-50" />
+
+	<section class="mb-12">
+		<h2 class="title mb-6 text-xl">tl;dr</h2>
+		<ul class="space-y-2 list-none pl-0">
+      <li class="mb-2">• Currently leading engineering decisions at Dev-Afrique Advisors as an Engineering Consultant</li>
+			<li class="mb-2">• Multiple years of experience as a full stack engineer building scalable applications and tools @Spherity, Engage, Mobnia </li>
+			<li class="mb-2">• Foundation in micro-processor design, and applied research, BEng. Electronic Engineering</li>
+			<li class="mb-2">• Excited about improving developer tooling, experience and productivity within teams</li>
+			<li class="mb-2">• Open-source (SDKs, and plugins) for APIs and Self-Sovereign Identity(DIDComm)</li>
 		</ul>
-	</section> -->
+	</section>
+
+	<hr class="my-12 border-t border-dashed border-accent opacity-50" />
+
 </PageLayout>
